@@ -69,7 +69,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
           {/* Add buttons */}
           <div className="button-container">
             <a
-              href={`https://github.com/Pheonix747hs/${repository.name}`}
+              href={`https://github.com/ojasvinborawke/${repository.name}`}
               target="_blank"
               rel="noopener noreferrer"
               className="button"
@@ -81,7 +81,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
                 href={
                   repository.homepage
                     ? repository.homepage
-                    : `https://pheonix747hs.github.io/${repository.name}`
+                    : `https://ojasvinborawke.github.io/${repository.name}`
                 }
                 target="_blank"
                 rel="noopener noreferrer"

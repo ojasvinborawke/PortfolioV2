@@ -20,7 +20,7 @@ function ProjectPage() {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/Pheonix747hs/repos",
+          "https://api.github.com/users/ojasvinborawke/repos",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -96,7 +96,9 @@ function ProjectPage() {
             about the project.
           </p>
           <div className="grid md:grid-cols-2 gap-10 justify-items-center">
-            {repos.map((repo) => (
+            {repos
+            .filter((repo) => repo.name.toLowerCase() !== "ojasvinborawke")
+            .map((repo) => (
               <ProjectCard key={repo.name} repository={repo} />
             ))}
           </div>

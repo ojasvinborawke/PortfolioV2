@@ -15,6 +15,8 @@ const navItems = [
   { icon: <FileText size={24} />, label: "Resume", href: "/resume" },
 ];
 
+const resumeFileId = import.meta.env.VITE_RESUME_URL;
+
 function App() {
   return (
     <>
@@ -41,7 +43,7 @@ function App() {
             <Route path="/about" element={<TimelineDemo />} />
             <Route
               path="/resume"
-              element={<PDFViewer fileId="1wWL-4q0aVaN2sZmvm8QZdqNhKlXHQeBN" />}
+              element={<PDFViewer fileId={resumeFileId} />}
             />
           </Routes>
         </Router>
